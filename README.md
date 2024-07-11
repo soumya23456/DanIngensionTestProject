@@ -1,2 +1,2 @@
 # DanIngensionTestProject
-TestWitthSelenium
+TestWithSelenium
