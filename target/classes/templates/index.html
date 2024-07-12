@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" th:href="@{/fonts/material-icon/css/material-design-iconic-font.min.css}">
+	<link rel="stylesheet" th:href="@{/css/styles.css}">
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+	<script type="text/javascript" th:src="@{/javascript/file_validation.js}"></script>
+	<script type="text/javascript" th:src="@{/javascript/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/javascript/bootstrap.bundle.min.js}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	
+	<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+		<script type="text/javascript" th:src="@{/javascript/index.js}"></script>	
+	<title>Novo ProSo, Inc</title>
+</head>
+<body>
+	<div class="bg-dark m-0 p-3">
+      	<h1 class="text-center my-2 text-white">Welcome to Novo ProSo, Inc</h1>
+       	<h4 class="text-center text-white-50 py-1">DAN Ingestion Project</h4>
+    </div>
+    
+    	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<div class="container-fluid d-lg-flex">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+				aria-controls="navbarTogglerDemo03" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand px-2 px-lg-5 mx-lg-5 my-2 py-lg-2 fs-4 flex-lg-fill" href="#">Novo
+				ProSo, Inc</a>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link px-3 py-2 m-1 active"
+						href="#home">HOME</a></li>
+					<li class="nav-item"><a class="nav-link px-3 py-2 m-1"
+						th:href="@{/home/login}">SIGN IN</a></li>
+					<li class="nav-item"><a class="nav-link px-3 py-2 m-1"
+						href="#about">ABOUT US</a></li>
+					<li class="nav-item"><a class="nav-link px-3 py-2 m-1"
+						href="#contact">CONTACT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="home">
+	<section id="home" class="welcome d-flex justify-content-center align-items-center">
+		<h1>Welcome to DAN INGENSION Project</h1>
+	</section>
+		<section id="about" class="about p-5">
+		<div class="my-5">
+			<div class="row mt-5">
+				<div class="col-lg-6 ps-5">
+					<h1 class="text-start mb-3">About Us</h1>
+					<p class="p-1 mb-1">Novo ProSo's core purpose is to
+						revolutionalize software solutions, exceeding the ever changing
+						expectations of our clients. Creating an outstanding collaboration
+						by "growing together" is the foundation of our company.</p>
+					<p class="p-1 mb-1">Our Mission at Novo ProSo, Inc. is to be a
+						leader of innovation in the software industry by using our
+						extensive IT experience to deliver tangible business results. We
+						strive to deliver outstanding services and unparalleled
+						satisfaction to our employees, and clients by building long-term
+						relationships based on mutual trust and respect.</p>
+				</div>
+				<div class="col-lg-6 ps-5">
+					<h1 class="mb-3">Core Values</h1>
+					<ul class="mb-3">
+						<li class="p-1 mb-1">Client focused and client centric</li>
+						<li class="p-1 mb-1">Practise with Honesty and Integrity</li>
+						<li class="p-1 mb-1">Dedication to quality and client
+							satisfaction</li>
+						<li class="p-1 mb-1">Commitment to consistent and predictable
+							delivery</li>
+					</ul>
+
+					<h1 class="mb-3">Certifications</h1>
+					<ul class="mb-3">
+						<li class="p-1 mb-1">Economy Disadvantaged Eomen-Owned Small
+							Business (EDWOSB) by the U.S. Small Business Administration (SBA)</li>
+						<li class="p-1 mb-1">EDWOSB Certification Expiration Date:
+							04/20/2023</li>
+						<li class="p-1 mb-1">Women-owned Business Enterprise (WBE) by
+							State of Missouri</li>
+						<li class="p-1 mb-1">WBE Certification Expiration Date:
+							02/25/2024</li>
+						<li class="p-1 mb-1">ISO 9001:2015 Certified</li>
+						<li class="p-1 mb-1">ISO 9001:2015 Certification Expiration
+							Date: 08/11/2023</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+		<section id="contact" class="contact p-5">
+		<div class="mt-5">
+			<h2 class="text-center mt-5 mx-5">CONTACT US</h2>
+			<span class="mt-1 d-block text-center mb-2">Great People ::
+				Good Meetings</span>
+			<div class="row mt-2">
+				<div class="col-lg-6 px-5">
+					<div th:if="${captchaerr}">
+						<div class="alert alert-danger alert-dismissible fade show"
+							role="alert">
+							<strong th:text="${captchaerr}"></strong>
+							<button type="button" class="btn-close" data-bs-dismiss="alert"
+								aria-label="Close"></button>
+						</div>
+					</div>
+					<div th:if="${param.fdbk_success}" class="alert alert-success alert-dismissible fade show"
+							role="alert">
+						<strong>Your feedback has been sent successfully</strong>
+						<button type="button" class="btn-close" data-bs-dismiss="alert"
+								aria-label="Close"></button>
+					</div>
+					<form class="row g-3" th:action="@{/home/savefeedback}" method="post"
+						name="feedbackform" id="feedbackform" th:object="${feedback}">
+						<div class="col-md-6 pb-2">
+							<input type="text" class="form-control" th:field="*{fullname}" id="fullname"
+								name="fullname" placeholder="Full Name" />
+								<span th:if="${#fields.hasErrors('fullname')}" th:errors="*{fullname}" class="text-danger fw-light"></span>
+								<small class="text-danger py-1" id="fnameerr" th:text="${fnameerr}"></small>
+						</div>
+						<div class="col-md-6 pb-2">
+							<input type="email" class="form-control" th:field="*{email}" id="feedbackemail" name="feedbackemail"
+							 placeholder="Email Address"  />
+								<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger fw-light"></span>
+								<small class="text-danger py-1" id="emailerr" th:text="${emailerr}"></small>
+						</div>
+						<div class="col-12 pb-2">
+							<input type="text" class="form-control" th:field="*{subject}" id="subject"
+								name="subject" placeholder="Subject" />
+								<span th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}" class="text-danger fw-light"></span>
+							<small class="text-danger py-1" id="subjecterr" th:text="${subjecterr}"></small>
+						</div>
+						<div class="col-12 pb-2">
+							<textarea class="form-control" placeholder="Enter your message" th:field="*{message}"
+								id="message" name="message" style="height: 100px"
+								rows="6">
+                        </textarea>
+								<span th:if="${#fields.hasErrors('message')}" th:errors="*{message}" class="text-danger fw-light"></span>
+							<small class="text-danger py-1" id="msgerr" th:text="${msgerr}"></small>
+						</div>
+						<div class="col-md-6 pb-2">
+							<div class="text-start form-field">
+								<div class="g-recaptcha" id="recaptcha"
+									data-sitekey="6LdSXAgqAAAAAHx3RMlLM5jD_gSEejw3xw4LwqnW"></div>
+								<small class="d-block text-start text-danger" id="recaptchaerr"></small>
+							</div>
+						</div>
+						<div class="col-12 pb-2">
+							<div
+								class="d-flex card-footer border-0 align-items-center justify-content-center bg-transparent">
+								<button type="submit" class="w-50 btn btn-dark m-lg-2">Send
+									Now</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-lg-6 ps-5">
+					<p class="fs-5 mb-1">Need to find us? No problem, you have come
+						to right place.</p>
+					<br>
+					<address>
+						Corporate Office : 725 PCA Road, <br> Warrensburg, Missouri
+						64093. <br>
+						<br> Branch Office : 540 E Young Ave, Suite J, <br>
+						Warrensburg, Missouri 64093, <br>
+						<br> Phone : 86-200-0799 <br>
+						<br> Email : <a class="text-decoration-none"
+							href="mailto:info@novoproso.com">info@novoproso.com</a>
+					</address>
+					<br>
+				</div>
+			</div>
+			<div class="container-lg p-4">
+				<iframe class="w-100"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.5630355400313!2d-93.72035298525044!3d38.77372516183062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c3e3c7a0f17e3f%3A0x473a9fd575ad87a5!2sNovo%20ProSo%2C%20Inc.!5e0!3m2!1sen!2sus!4v1634767547890!5m2!1sen!2sus"
+					width="520" height="325" style="border: 0;" allowfullscreen=""
+					loading="lazy"></iframe>
+			</div>
+		</div>
+
+	</section>
+
+
+	<footer class="text-muted mt-3 py-1">
+		<div class="text-center">
+			<p>Novo ProSo, Inc</p>
+		</div>
+	</footer>
+</section>
+<script>
+$("a[href^='#']").click(function(e){
+    e.preventDefault();
+    var location = $($(this).attr("href")).offset().top;
+    $("li a").removeClass("active");
+    $(this).addClass("active");
+    $("body, html").animate({scrollTop: location}, 100 );
+});
+</script>
+</body>
+</html>

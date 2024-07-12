@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" th:href="@{/fonts/material-icon/css/material-design-iconic-font.min.css}">
+	<link rel="stylesheet" th:href="@{/css/styles.css}">
+	
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	
+	<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+	
+	<script type="text/javascript" th:src="@{/javascript/file_validation.js}"></script>
+	<script type="text/javascript" th:src="@{/javascript/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/javascript/bootstrap.bundle.min.js}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	
+	<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+	
+	
+		<style>
+	tr, td, th {
+		padding: 20px;
+		text-align: center;
+	}
+	</style>
+	<title>Novo ProSo, Inc</title>
+</head>
+<body class="dashboard">
+<section>
+	<!-- nav bar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+		<div class="container-fluid">
+			<h1><a class="navbar-brand text-dark" href="#">Novo ProSo, Inc</a></h1>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="row m-0 collapse navbar-collapse"
+				id="navbarSupportedContent">
+				<div class="row">
+					<!-- nav tabs -->
+
+					<ul class="col-lg-10 nav nav-pills" id="pills-tab" role="tablist">
+						<li class="nav-item p-2 me-2" role="uploads">
+							<button class="nav-link active" id="pills-uploads-tab"
+								data-bs-toggle="pill" data-bs-target="#pills-uploads"
+								type="button" role="tab" aria-controls="pills-uploads"
+								aria-selected="true">Upload Files
+							</button>
+						</li>
+						<li class="nav-item p-2 me-2" role="clients">
+							<button class="nav-link" id="pills-clients-tab"
+								data-bs-toggle="pill" data-bs-target="#pills-clients"
+								type="button" role="tab" aria-controls="pills-clients"
+								aria-selected="false">Clients</button>
+						</li>
+						<li class="nav-item p-2 me-2" role="vendors">
+							<button class="nav-link" id="pills-vendors-tab"
+								data-bs-toggle="pill" data-bs-target="#pills-vendors"
+								type="button" role="tab" aria-controls="pills-vendors"
+								aria-selected="false">Vendors</button>
+						</li>
+						<li class="nav-item p-2 me-2" role="tabfour">
+							<button class="nav-link" id="pills-tabfour-tab"
+								data-bs-toggle="pill" data-bs-target="#pills-tabfour"
+								type="button" role="tab" aria-controls="pills-tabfour"
+								aria-selected="true">Tab Four</button>
+						</li>
+
+						<li class="nav-item p-2 me-2" role="downloads">
+							<button class="nav-link" id="pills-downloads-tab"
+								data-bs-toggle="pill" data-bs-target="#pills-downloads"
+								type="button" role="tab" aria-controls="pills-downloads"
+								aria-selected="true">Downloads</button>
+						</li>
+					</ul>
+					<!-- nav tabs- icon logout -->
+					<ul class="col-lg-2 navbar-nav">
+
+						<li class="m-0 nav-item dropdown float-end"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+									fill="currentColor" class="bi bi-person-square"
+									viewBox="0 0 16 16">
+					 	 		<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+					  			<path
+										d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" /></svg>
+						</a> <i class="bi bi-person-square"></i>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="#">Profile</a></li>
+								<li><a class="dropdown-item" href="#">Notifications</a></li>
+								<li><a class="dropdown-item" href="#">Settings</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="/home/user/logout">Logout</a></li>
+							</ul></li>
+						<li class="nav-item px-2"><span
+							class="nav-link text-black-50 fw-bold" tabindex="-1"
+							aria-disabled="true">paul harry</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- nav tabs content -->
+	<div class="tab-content" id="pills-tabContent">
+
+		<!--  tabs -->
+		<!-- upload tab -->
+		<div class="p-3 tab-pane show active" id="pills-uploads"
+			role="tabpanel" aria-labelledby="pills-uploads-tab">
+			<div class="p-5 my-2 mx-5 tab-content bg-white bg-opacity-75 rounded">
+				<h1 class="text-center m-3 text-bold">Welcome Paul harry to Dan Ingension</h1>
+				<h4 class="text-decoration-underline mb-3">Reports and Files</h4>
+			<div id="uploadmsg" class="mx-4 mb-1 w-50" th:if="${message}">
+				<div class="alert alert-success alert-dismissible fade show"
+					role="alert">
+					<strong th:text="${message}"></strong>
+					<button type="button" class="btn-close" data-bs-dismiss="alert"
+						aria-label="Close"></button>
+				</div>
+			</div>
+			<div id="uploadmsg" class="mx-4 mb-1 w-50" th:if="${errormessage}">
+				<div class="alert alert-warning alert-dismissible fade show"
+					role="alert">
+					<strong th:text="${errormessage}"></strong>
+					<button type="button" class="btn-close" data-bs-dismiss="alert"
+						aria-label="Close"></button>
+				</div>
+			</div>
+			<form th:action="@{/home/user/fileUpload}" name="fileform" id="fileform" method="post"
+				enctype="multipart/form-data"
+				class="m-3 d-flex justify-content-center">
+				<div class="m-2">
+					<span class="form-label text-start text-black-50 pe-3">Upload files and select the file
+						extensions*</span>
+					<div class="row">
+						<div class="col-8 p-2">
+							<input class="form-control" name="multifile" id="multifile" type="file" multiple /> 
+							<small class="d-block text-start text-danger fw-bold" id="error"></small>
+						</div>
+						<div class="p-2 col-4">
+							<select class="form-select" aria-label="File type"
+								name="filetype" id="filetype" size="1" multiple>
+								<option value="">Select the File Type</option>
+								<option value="text/csv">.csv | text/csv</option>
+								<option value="text/plain">.txt | text/plain</option>
+								<option value="application/vnd.ms-excel">.xls |
+									application/vnd.ms-excel</option>
+								<option
+									value="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+									class="text-wrap">.xlsx |
+									application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</option>
+								<option value="application/xml">.xml | application/xml</option>
+								<option value="application/msword">.doc |
+									application/msword</option>
+								<option
+									value="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+									class="text-wrap">.docx |
+									application/vnd.openxmlformats-officedocument.wordprocessingml.document</option>
+								<option value="image/jpeg">.jpeg/.jpg | image/jpeg</option>
+								<option value="image/png">.png | image/png</option>
+							</select> <small class="d-block text-start text-danger fw-bold"
+								id="typeerror"></small>
+						</div>
+					</div>
+					<button type="submit"
+						class="my-2 w-25 btn btn-outline-dark px-3">Upload
+						File</button>
+				</div>
+			</form>
+			</div>
+
+		</div>
+
+		<!-- client tabs -->
+		<div class="p-3 tab-pane fade" id="pills-clients" role="tabpanel"
+			aria-labelledby="pills-clients-tab">
+			<div class="p-5 my-2 mx-5 tab-content bg-white bg-opacity-75 rounded">
+		
+			<table  class="table">
+				<tr>
+					<th>ID</th>
+					<th>Full Name</th>
+					<th>Email</th>
+					<th>Phone Number</th>
+					<th>Region</th>
+					<th>Country</th>
+					<th>Add</th>
+					<th>Delete</th>
+				</tr>
+ 				<tr th:each="user : ${clients}">
+					<td th:text="${user.id}"></td>
+					<td th:text="${user.fullName}"></td>
+					<td th:text="${user.email}"></td>
+					<td th:text="${user.phoneNumber}"></td>
+					<td th:text="${user.region}"></td>
+					<td th:text="${user.country}"></td>
+					<td><button type="button" class="btn btn-primary">Add
+							Client</button></td>
+					<td><button type="button" class="btn btn-primary">Delete
+							Client</button></td>
+
+				</tr>
+			</table>
+			</div>
+		</div>
+
+		<!-- vendor tabs -->
+		<div class="p-3 tab-pane fade" id="pills-vendors" role="tabpanel"
+			aria-labelledby="pills-vendors-tab">
+			<div class="p-5 my-2 mx-5 tab-content bg-white bg-opacity-75 rounded">
+			
+			<table class="table table-hover">
+				<tr>
+					<th>ID</th>
+					<th>Full Name</th>
+					<th>Email</th>
+					<th>Phone Number</th>
+					<th>Region</th>
+					<th>Country</th>
+					<th>Add</th>
+					<th>Delete</th>
+				</tr>
+ 				<tr th:each="user : ${vendors}">
+					<td th:text="${user.id}"></td>
+					<td th:text="${user.fullName}"></td>
+					<td th:text="${user.email}"></td>
+					<td th:text="${user.phoneNumber}"></td>
+					<td th:text="${user.region}"></td>
+					<td th:text="${user.country}"></td>
+					<td><button type="button" class="btn btn-primary">Add
+							Vendor</button></td>
+					<td><button type="button" class="btn btn-primary">Delete
+							Vendor</button></td>
+
+				</tr>
+			</table>
+			</div>
+		</div>
+		<!-- tab four -->
+		<div class="tab-pane fade" id="pills-tabfour" role="tabpanel"
+			aria-labelledby="pills-tabfour-tab">
+			<div class="p-5 my-2 mx-5 tab-content bg-white bg-opacity-75 rounded">
+			
+			<h1 class="m-3 text-center">Tab Four</h1>
+			<p>tab two tab two tab two tab two tab two tab two tab two tab two tab two tab two tab two tab two tab two tab two</p>
+			<p>tab two tab two tab two tab two tab two tab two tab two tab two tab two tab two tab two tab two tab two tab two</p>
+			</div>
+		</div>
+
+		<!-- Download tabs -->
+		<div class="p-3 tab-pane fade" id="pills-downloads" role="tabpanel"
+			aria-labelledby="pills-downloads-tab">
+			<div class="p-5 my-2 mx-5 tab-content bg-white bg-opacity-75 rounded">
+
+			<h1 class="m-2 text-center">Downloads</h1>
+			<table class="table">
+				<tr>
+					<th>ID</th>
+					<th>File Name</th>
+					<th>User Name</th>
+					<th>User Type</th>
+					<th>File Type</th>
+					<th>Created At</th>
+					<th>File Size (KB)</th>
+					<th>Download</th>
+				</tr>
+				<tr th:each="file : ${files}">
+					<td th:text="${file.id}"></td>
+					<td th:text="${file.fileName}"></td>
+					<td th:text="${file.userName}"></td>
+					<td th:text="${file.userType}"></td>
+					<td th:text="${file.fileType}"></td>
+					<td th:text="${file.createdAt}"></td>
+					<td th:text="${file.fileSize}"></td>
+					<td><a id="downloadLink" class="hyperLink"
+						th:href="@{/home/files/}+${file.fileName}" th:text="download"></a></td>
+				</tr>
+			</table>
+		</div>			
+		</div>
+	</div>
+</section>
+</body>
+</html>
