@@ -1,5 +1,5 @@
 # DanIngensionTestProject
 TestWitthSelenium
-dan_ingension_project : master 
-DanInjentionTestProject : branch
-Selenium + Junit 
+dan_ingension_project : master (Developed)
+DanInjentionTestProject : branch (Deployed)
+Selenium + Junit + Maven
